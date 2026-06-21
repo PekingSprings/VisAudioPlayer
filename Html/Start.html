@@ -2,15 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Audio Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+
+        /* ----- 页面背景，忽略 ----- */
+    body {
+        background-image: url("img/Background.jpeg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 40px;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        }
+    .lable-1{
+        display: flex;
+        font-size: large;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        text-align: center;
+        font-family:system-ui, sans-serif;
+    }
+    .button-1{
+        border-radius:12px;
+        background-color:white;
+        border:2px solid white;
+    }
+    .button-1:active{
+        outline:none;
+        border-color: #6366f1;       /* 边框变成紫色 */
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); /* 外发光 */
+    }
+    /* =============================================
+       样式 1：经典圆润风
+       ============================================= */
+    .input-1 {
+        width: 100%;
+        padding: 14px 18px;          /* 内边距撑开高度 */
+        font-size: 16px;
+        border: 2px solid #e2e8f0;   /* 浅灰边框 */
+        border-radius: 12px;          /* 大圆角 */
+        background: #f8fafc;
+        transition: all 0.3s ease;    /* 平滑过渡动画 */
+        box-sizing: border-box;       /* 保证宽度100%不乱跑 */
+    }
+    /* ★ 核心：点击输入时的“高亮”效果 */
+    .input-1:focus {
+        outline: none;               /* 去掉浏览器默认蓝边 */
+        border-color: #6366f1;       /* 边框变成紫色 */
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); /* 外发光 */
+    }
+    /* 占位文字颜色变浅 */
+    .input-1::placeholder {
+        color: #94a3b8;
+        font-weight: 300;
+    }
+</style>
 <body>
 <div>
-    <h1 style="font-family: Aldrich">BiliBili AudioPlayer</h1>
-    <input placeholder="Input BV" type="text" style="width: 300px;height: 20px;" id="input"/>
+    <h1 style="display: flex;justify-content: center;align-content: center">BiliBili AudioPlayer</h1>
+    <label class="lable-1">输入Bilibili视频AV,BV链接</label>
+    <p style="display:flex;justify-content: center;align-content: center">
+        <input class="input-1" placeholder="Input BV" type="text" style="width: 300px;height: 20px;" id="input"/>
+        <button class="button-1">Enter</button>
+    </p>
     <p>
-        <img src="Luoxi.jpeg" alt="kitten" height="400px" >
+
     </p>
 </div>
+
 </body>
 </html>
