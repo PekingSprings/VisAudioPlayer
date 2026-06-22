@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录到你的账号</title>
+    <style>
+        /* ----- 页面背景，忽略 ----- */
+        body {
+            background-image: url("img/Background1.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center,center;
+            padding: 40px;
+            font-family: system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .group {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 400px;
+        }
+        .group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1e293b;
+            font-size: 14px;
+        }
+        .group p {
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        /* =============================================
+           样式 1：经典圆润风（最通用，直接抄这个）
+           ============================================= */
+        .input-1 {
+            width: 100%;
+            padding: 14px 18px;          /* 内边距撑开高度 */
+            font-size: 16px;
+            border: 2px solid #e2e8f0;   /* 浅灰边框 */
+            border-radius: 12px;          /* 大圆角 */
+            background: #f8fafc;
+            transition: all 0.3s ease;    /* 平滑过渡动画 */
+            box-sizing: border-box;       /* 保证宽度100%不乱跑 */
+        }
+        /* ★ 核心：点击输入时的“高亮”效果 */
+        .input-1:focus {
+            outline: none;               /* 去掉浏览器默认蓝边 */
+            border-color: #6366f1;       /* 边框变成紫色 */
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); /* 外发光 */
+        }
+        /* 占位文字颜色变浅 */
+        .input-1::placeholder {
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        /* =============================================
+           样式 2：极简底线风（只有下划线，适合登录框）
+           ============================================= */
+        .input-2 {
+            width: 100%;
+            padding: 12px 4px;
+            font-size: 16px;
+            border: none;                /* 去掉所有边框 */
+            border-bottom: 2px solid #d1d5db; /* 只留下划线 */
+            background: transparent;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .input-2:focus {
+            outline: none;
+            border-bottom-color: #0ea5e9; /* 聚焦时下划线变蓝 */
+        }
+        .input-2::placeholder {
+            color: #9ca3af;
+        }
+        .button-1{
+            font-size:large;
+            height: 40px;
+            width: 100%;
+            border-radius:12px;
+            background-color:whitesmoke;
+            border:2px solid white;
+        }
+        .button-1:active{
+            outline:none;
+            border-color: #6366f1;       /* 边框变成紫色 */
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); /* 外发光 */
+        }
+    </style>
+</head>
+<body>
+
+<!-- 样例 1：圆润风 -->
+<div class="group">
+    <label>👤 用户名</label>
+    <input class="input-1" type="text" placeholder="请输入用户名"id="username">
+</div>
+
+<!-- 样例 2：底线风 -->
+<div class="group">
+    <label>✉️ 密码</label>
+    <input class="input-2" type="email" placeholder="请输入密码"id="password">
+</div>
+
+<div class="group">
+    <label>😊一切就绪？</label>
+    <button class="button-1"id="loginBtn"></button>
+</div>
+<script src="Jsall.js"></script>
+</body>
+</html>

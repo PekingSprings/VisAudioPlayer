@@ -7,19 +7,32 @@
 </head>
 <style>
 
-        /* ----- 页面背景，忽略 ----- */
+    /* ----- 页面背景，忽略 ----- */
     body {
         background-image: url("img/Background.jpeg");
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 40px;
         font-family: system-ui, sans-serif;
         display: flex;
         flex-direction: column;
         gap: 40px;
-        }
+    }
+    .group{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        max-width: 400px;
+        opacity: 0.8;
+    }
     .lable-1{
         display: flex;
         font-size: large;
@@ -30,8 +43,10 @@
         font-family:system-ui, sans-serif;
     }
     .button-1{
+        font-size:large;
+        height: 40px;
         border-radius:12px;
-        background-color:white;
+        background-color:whitesmoke;
         border:2px solid white;
     }
     .button-1:active{
@@ -67,17 +82,16 @@
     }
 </style>
 <body>
-<div>
+<div class="group">
     <h1 style="display: flex;justify-content: center;align-content: center">BiliBili AudioPlayer</h1>
     <label class="lable-1">输入Bilibili视频AV,BV链接</label>
-    <p style="display:flex;justify-content: center;align-content: center">
+    <div class="group">
         <input class="input-1" placeholder="Input BV" type="text" style="width: 300px;height: 20px;" id="input"/>
         <button class="button-1">Enter</button>
-    </p>
-    <p>
-
-    </p>
+    </div>
 </div>
-
+<!--<div class="group"style="width:180px">-->
+<!--    <h2 style="display: flex;justify-content: center;align-content: center">AudioCodelist</h2>-->
+<!--</div>-->
 </body>
 </html>
